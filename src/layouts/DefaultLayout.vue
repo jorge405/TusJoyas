@@ -272,7 +272,11 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
+  /* ✅ Permitir scroll interno del sidebar */
   overflow-y: auto;
+  overflow-x: hidden;
+  /* ✅ Que sea flexible */
+  min-height: 0;
 }
 
 .joya-nav-item {
@@ -336,6 +340,7 @@ onMounted(() => {
 .joya-content {
   display: flex;
   flex-direction: column;
+  /* ✅ min-height, NO height: 100vh */
   min-height: 100vh;
   min-width: 0;
   width: 100%;
@@ -466,6 +471,9 @@ onMounted(() => {
   min-width: 0;
   padding: 1rem;
   padding-bottom: 6rem;
+  /* ✅ Permitir scroll vertical natural */
+  overflow-y: visible;
+  /* ✅ Evitar scroll horizontal */
   overflow-x: hidden;
 }
 @media (min-width: 640px) {
@@ -474,6 +482,7 @@ onMounted(() => {
 @media (min-width: 1024px) {
   .joya-main { padding: 2rem; padding-bottom: 2rem; }
 }
+
 .joya-main__inner {
   max-width: 1600px;
   margin: 0 auto;
