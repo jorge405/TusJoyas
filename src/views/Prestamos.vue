@@ -5,6 +5,7 @@ import { useConfigStore } from '../stores/config'
 import { icons } from '../components/icons'
 import ComprobantePrestamo from '../components/ComprobantePrestamo.vue'
 import { generarPDFPrestamo } from '../utils/comprobantePDF'
+import ClienteAutocomplete from '../components/ClienteAutocomplete.vue'
 
 const store = usePrestamosStore()
 const configStore = useConfigStore()
@@ -561,8 +562,11 @@ watch(mostrarForm, (v) => {
 
           <div class="p-5 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="md:col-span-2">
-              <label class="label">Cliente *</label>
-              <input v-model="form.cliente" class="input" placeholder="Nombre del cliente" />
+                <label class="label">Cliente *</label>
+                <ClienteAutocomplete
+                  v-model="form.cliente"
+                  placeholder="Nombre del cliente"
+                />
             </div>
 
             <div class="md:col-span-2">

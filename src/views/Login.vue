@@ -129,6 +129,7 @@ function rellenarDemo() {
       >
         Usar demo → admin / admin123
       </button>
+      <span class="text-xs text-ink-400 text-center block mt-3">Desarrollado por DigitalDevTech Derechos Reservados</span>
     </div>
   </div>
 </template>
